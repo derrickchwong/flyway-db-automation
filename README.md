@@ -4,6 +4,8 @@ One of the DORA technical capabilities is [Database change management](https://d
 
 This repo demostrate the use of flyway on a kubernetes cluster to update DB schema. 
 
+Flyway is an open-source database migration tool. It is java friendly - can be ran by maven / gradle but it is not limited to Java. With k8s, you can easily run it as a Job or as a initContainer of a pod. 
+
 There are number of files in the [sql](./sql) folder, named with the version number. When a schema change is needed, eg, adding a new column, simply add a new file for the alter table statement.
 
 Also update the [kustomization.yaml](./kustomization.yaml) file to add the new file into `flyway-sql` configmapGenerator.
