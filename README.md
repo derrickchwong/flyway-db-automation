@@ -12,4 +12,4 @@ kubectl apply -k .
 
 It will create a k8s job for Flyway and apply the sql files.   
 
-You can also use Flyway as `initContainer` of your application so whenever the application is started, Flyway will apply the latest schema when needed.   
+You can also use Flyway as `initContainer` of a pod so whenever the pod is started, Flyway will apply the latest schema if needed.
