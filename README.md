@@ -2,7 +2,7 @@
 
 One of the DORA technical capabilities is [Database change management](https://dora.dev/devops-capabilities/technical/database-change-management/). DORA’s research found that integrating database work into the [software delivery](https://dora.dev/devops-capabilities/technical/continuous-delivery) process positively contributes to continuous delivery. 
 
-Flyway is an open-source database migration tool. It is java friendly - can be ran by maven / gradle but it is not limited to Java. With k8s, you can easily run it as a Job or as a initContainer of a pod. 
+Flyway is an open-source database migration tool. It is java friendly - can be ran by `maven` / `gradle` but it is not limited to Java. With k8s, you can easily run it as a Job or as a `initContainer` of a pod. 
 
 This repo demostrate the use of flyway on a kubernetes cluster to update DB schema. 
 
@@ -33,5 +33,3 @@ Current version of schema "public": 2
 Migrating schema "public" to version "3 - Insert person"
 Successfully applied 1 migration to schema "public", now at version v3 (execution time 00:00.102s)
 ```
-
-You can also use Flyway as `initContainer` of a pod so whenever the pod is started, Flyway will apply the latest schema if needed.
