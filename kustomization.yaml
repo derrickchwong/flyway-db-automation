@@ -11,6 +11,7 @@ configMapGenerator:
     files:
       - sql/V1__Create_person_table.sql
       - sql/V2__Alter_person_table_add_country.sql
+      - sql/V3__Insert_person.sql
 
 secretGenerator:
   - name: flyway-config
