@@ -15,7 +15,7 @@ Also update the [kustomization.yaml](./kustomization.yaml) file to add the new f
 
 You will need to create a `flyway.conf` on the `k8s` folder, you can copy the `flyway.conf.sample`
 
-To run it, run 
+To run it, use below command (assuming you have [kustomize](https://kustomize.io/) installed) 
 
 ```
 kubectl apply -k . 
