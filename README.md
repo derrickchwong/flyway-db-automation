@@ -1,5 +1,7 @@
 # Flyway on Kubernetes for Database Migrations
 
+One of the DORA technical capabilities is Database change management. 
+
 This repo demostrate the use of flyway on a kubernetes cluster to update DB schema. 
 
 There are number of files in the [sql](./sql) folder, named with the version number. When a schema change is needed, eg, adding a new column, simply add a new file for the alter table statement.
