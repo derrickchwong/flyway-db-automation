@@ -1,6 +1,6 @@
 # Flyway on Kubernetes for Database Migrations
 
-One of the DORA technical capabilities is Database change management. 
+One of the DORA technical capabilities is [Database change management](https://dora.dev/devops-capabilities/technical/database-change-management/). DORA’s research found that integrating database work into the [software delivery](https://dora.dev/devops-capabilities/technical/continuous-delivery) process positively contributes to continuous delivery. 
 
 This repo demostrate the use of flyway on a kubernetes cluster to update DB schema. 
 
