@@ -1,0 +1,5 @@
+flyway.driver=org.postgresql.Driver
+flyway.url=jdbc:postgresql://YOUR_DB_IP:5432/YOUR_DB_NAME
+flyway.user=USERNAME
+flyway.password=PASSWORD
+flyway.schemas=SCHEMA

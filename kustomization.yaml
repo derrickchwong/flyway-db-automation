@@ -1,0 +1,17 @@
+# add k8s/flyway-job.yaml as resources 
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - k8s/flyway-job.yaml
+
+configMapGenerator:
+  - name: flyway-sql
+    files:
+      - sql/V1__Create_person_table.sql
+      - sql/V2__Alter_person_table_add_country.sql
+
+secretGenerator:
+  - name: flyway-config
+    files:
+      - k8s/flyway.conf

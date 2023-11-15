@@ -1,0 +1,27 @@
+# k8s yaml for running flyway job to migrate database 
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: flyway-job
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: flyway
+        image: redgate/flyway
+        command: ["flyway", "migrate"]
+        volumeMounts:
+        - name: flyway-config
+          mountPath: /flyway/conf
+        - name: flyway-sql
+          mountPath: /flyway/sql
+      volumes:
+      - name: flyway-config
+        secret:
+          secretName: flyway-config
+          
+          # name: flyway-config
+      - name: flyway-sql
+        configMap:
+          name: flyway-sql
