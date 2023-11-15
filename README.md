@@ -1,6 +1,13 @@
-### Flyway on Kubernetes for Database Migrations
+# Flyway on Kubernetes for Database Migrations
 
-This repo demostrate the use of flyway on a kubernetes cluster.
+This repo demostrate the use of flyway on a kubernetes cluster to update DB schema. 
+
+There are number of files in the [sql](./sql) folder, named with the version number. When a schema change is needed, eg, adding a new column, simply add a new file for the alter table statement.
+
+Also update the [kustomization.yaml](./kustomization.yaml) file to add the new file into `flyway-sql` configmapGenerator.
+
+
+## How to try it
 
 You will need to create a `flyway.conf` on the `k8s` folder, you can copy the `flyway.conf.sample`
 
