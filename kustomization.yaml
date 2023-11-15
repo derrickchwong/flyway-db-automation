@@ -5,6 +5,7 @@ kind: Kustomization
 resources:
   - k8s/flyway-job.yaml
 
+# TODO see if any way to add all files in a folder to configMap
 configMapGenerator:
   - name: flyway-sql
     files:
